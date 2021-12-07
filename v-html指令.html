@@ -9,14 +9,22 @@
 </head>
 
 <body>
-    <div id="app"></div>
+    <div id="app">
+        <p v-html="content1"></p>
+        <p v-text="content2"></p>
+        <br/>
+        <p v-html="content3"></p>
+        <p v-text="content4"></p>
+    </div>
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
         var app = new Vue({
             el:"#app",
             data:{
-                content:"黑马程序员"
+                content1:"布鲁克林篮网队",                
+                content2:"布鲁克林篮网队",                
+                content3:"<a href='https://www.baidu.ocm'>布鲁克林篮网队</a>",                content4:"<a href='https://www.baidu.ocm'>布鲁克林篮网队</a>"
             }
         })
     </script>

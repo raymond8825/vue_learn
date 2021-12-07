@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>v-bind指令</title>
     <style>
-        .active{
+        .selected{
             border: 1px solid red;
         }
     </style>
@@ -17,9 +17,9 @@
     <div id="app">
         <img v-bind:src="imgSrc" alt="">
         <br>
-        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="isActive?'active':''" @click="toggleActive">
+        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="isActive?'selected':''" @click="toggleActive">
         <br>
-        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="{active:isActive}" @click="toggleActive">
+        <img :src="imgSrc" alt="" :title="imgTitle+'!!!'" :class="{selected:isActive}" @click="toggleActive">
     </div>
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -28,7 +28,7 @@
             el:"#app",
             data:{
                 imgSrc:"http://www.itheima.com/images/logo.png",
-                imgTitle:"黑马程序员",
+                imgTitle:"篮网队?",
                 isActive:false
             },
             methods: {

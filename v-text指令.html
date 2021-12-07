@@ -10,9 +10,9 @@
 
 <body>
     <div id="app">
-        <h2 v-text="message+'!'">深圳</h2>
-        <h2 v-text="info+'!'">深圳</h2>
-        <h2>{{ message +'!'}}深圳</h2>
+        <h2 v-text="message"> 深圳</h2>
+        <h2 v-text="info+'?'"> 深圳</h2>
+        <h2>{{ message +"?"}} 深圳</h2>
     </div>
     <!-- 开发环境版本，包含了有帮助的命令行警告 -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -20,8 +20,8 @@
         var app = new Vue({
             el:"#app",
             data:{
-                message:"黑马程序员!!!",
-                info:"前端与移动教研部"
+                message:"美国篮球职业联赛",
+                info:"布鲁克林篮网队"
             }
         })
     </script>

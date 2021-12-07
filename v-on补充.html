@@ -11,7 +11,7 @@
 <body>
     <div id="app">
         <input type="button" value="点击" @click="doIt(666,'老铁')">
-        <input type="text" @keyup.enter="sayHi">
+        <input type="input" @keyup.enter="releaseKey">
     </div>
     <!-- 1.开发环境版本，包含了有帮助的命令行警告 -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -20,12 +20,11 @@
             el:"#app",
             methods: {
                 doIt:function(p1,p2){
-                    console.log("做it");
                     console.log(p1);
                     console.log(p2);
                 },
-                sayHi:function(){
-                    alert("吃了没");
+                releaseKey:function(){
+                    alert("松开按键!")
                 }
             },
         })
